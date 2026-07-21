@@ -1,0 +1,304 @@
+<!--
+Author: WebThemez
+Author URL: http://webthemez.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="free-educational-responsive-web-template-webEdu">
+	<meta name="author" content="webThemez.com">
+	<title>WembleySchoolOfEnglish</title>
+	<!--<link rel="favicon" href="assets/images/favicon.png">-->
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen"> 
+	<link rel="stylesheet" href="assets/css/style.css">
+  <link rel='stylesheet' id='camera-css'  href='assets/css/camera.css' type='text/css' media='all'>
+  <link rel="icon" type="image/png" href="assets/images/browser.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/css/intlTelInput.css"/>	
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+   		(function(){
+      		emailjs.init({
+        	publicKey: "TZj-a2m9f2L-VBAcX",
+      		});
+   		})();
+	</script>
+	<script src="/assets/js/email.js"></script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/images/logo.png" alt="Techro HTML5 template"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="about.html">Quienes Somos</a></li>
+					<li><a href="courses.html">Cursos</a></li>
+					<li><a href="exams.html">Exámenes</a></li>
+					<li class="active"><a href="contact.html">Contacto</a></li>
+
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+		<header id="head" class="secondary">
+            <div class="container">
+                    <h1>Contáctanos</h1>
+                </div>
+    </header>
+
+
+	<!-- container -->
+	<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<h3 class="section-title">Tu mensaje</h3>
+						<p>Mándanos un mensaje y nos pondremos en contacto contigo lo más pronto posible</p>
+						
+						<form class="form-light mt-20" role="form" id="contactForm">
+							<div class="form-group">
+								<label>Nombre</label>
+								<input type="text" class="form-control" placeholder="Tu nombre" id="name" required>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Correo Electrónico</label>
+										<input type="email" class="form-control" placeholder="ejemplo@gmail.com" id="email" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Teléfono</label><br>
+										<input id="telefono" type="tel" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Asunto</label>
+								<input type="text" class="form-control" placeholder="Tu asunto" id="subject" required>
+							</div>
+							<div class="form-group">
+								<label>Mensaje</label>
+								<textarea class="form-control" id="message" placeholder="Escribe aqui tu mensaje..." style="height:100px;" required></textarea>
+							</div>
+							<button type="submit" class="btn btn-two">Enviar</button><p><br/></p>
+						</form>
+						<script>
+							document.getElementById("contactForm").addEventListener("submit", function(e){
+								e.preventDefault();
+								sendMail();
+							});
+						</script>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-6">
+								<h3 class="section-title">Localización</h3>
+								<div class="contact-info">
+									<h5>Dirección</h5>
+									<p>C/ Maestro Pascual Baca, 1, Alcalá la Real (Jaén)</p>
+									
+									<h5>Correo Electrónico</h5>
+									<p>wembleyschool2@gmail.com</p>
+									
+									<h5>Teléfono</h5>
+									<p>953 58 30 23</p>
+
+									<h5>Teléfono Móvil</h5>
+									<p>+34 670 70 43 80</p>
+								</div>
+							</div> 
+						</div> 						
+					</div>
+				</div>
+			</div>
+	<!-- /container -->
+
+	  <footer id="footer">
+ 
+		<div class="container">
+   <div class="row">
+  <div class="footerbottom">
+    <div class="col-md-3 col-sm-6">
+      <div class="footerwidget">
+        <h4>
+          Idiomas
+        </h4>
+        <div class="menu-course">
+          <ul class="menu">
+            <li><a href="courses.html#ingles">
+                Inglés
+              </a>
+            </li>
+            <li><a href="courses.html#frances">
+                Francés
+              </a>
+            </li>
+            <li><a href="courses.html#aleman">
+                Alemán
+              </a>
+            </li>
+            <li><a href="courses.html#español">
+               Español
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="footerwidget">
+        <h4>
+          Cursos
+        </h4>
+        <div class="menu-course">
+          <ul class="menu">
+            <li> <a href="courses.html#intensivos">
+                Intensivos  </a>
+            </li>
+            <li><a href="courses.html#infantil">
+                Infantil
+              </a>
+            </li>
+            <li><a href="courses.html#primaria">
+                Primaria
+              </a>
+            </li>
+            <li><a href="courses.html#cursos">
+                Más Cursos
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="footerwidget">
+        <h4>
+          Exámenes
+        </h4>
+        <div class="menu-course">
+          <ul class="menu">
+            <li> <a href="#">
+                Cambridge English
+              </a>
+            </li>
+            <li><a href="#">
+               Aptis
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Trinity
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Goethe Institut
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6"> 
+            	<div class="footerwidget"> 
+                         <h4>Contacto</h4> 
+            <div class="contact-info"> 
+            <i class="fa fa-map-marker"></i> C/ Maestro Pascual Baca, 1, Alcalá la Real, Jaén<br>
+            <i class="fa fa-phone"></i> 953 58 30 23 <br>
+             <i class="fa fa-envelope-o"></i> wembleyschool2@gmail.com
+              </div> 
+                </div><!-- end widget --> 
+    </div>
+  </div>
+</div>
+			<div class="social text-center">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+			</div>
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="index.html">Inicio</a> | 
+								<a href="about.html">Quienes Somos</a> |
+								<a href="courses.html">Cursos</a> |
+								<a href="exams.html">Exámenes</a> |
+								<a href="contact.html">Contacto</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2025 WembleySchoolOfEnglish | Todos los derechos reservados | Aviso legal | Política de privacidad</p>
+
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="assets/js/google-map.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#telefono");
+        window.intlTelInput(input, {
+    		initialCountry: "es",              // España por defecto
+    		preferredCountries: ["es","uk","fr","it","de","nl"], // favoritos arriba
+    		separateDialCode: true,            // muestra el prefijo separado
+    		utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js"
+  		});
+	</script>
+
+</body>
+</html>
