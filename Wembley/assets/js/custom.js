@@ -7,7 +7,18 @@ Note: Please do not remove the footer backlink (webthemez.com)--(if you want to 
 Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
 */
 jQuery(document).ready(function ($) {
-    
+
+    // Transparent-over-hero navbar on the homepage, solid once scrolled
+    var $navbarEl = $('.navbar.navbar-inverse');
+    if ($('#head:not(.secondary)').length) {
+        $navbarEl.addClass('navbar-overlay');
+        var toggleNavScrolled = function () {
+            $navbarEl.toggleClass('nav-scrolled', $(window).scrollTop() > 60);
+        };
+        $(window).on('scroll', toggleNavScrolled);
+        toggleNavScrolled();
+    }
+
     //Set the carousel options
     $('#quote-carousel').carousel({
         pause: true,
