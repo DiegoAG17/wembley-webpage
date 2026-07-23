@@ -9,8 +9,7 @@ function sendMail(){
 
     emailjs.send("service_6fmf46u","template_ue7gx7g",parms)
     .then(function(response) {
-        alert("Mensaje enviado con éxito. Gracias");
-        window.location.href = "index.html"; 
+        window.location.href = "gracias-contacto.html";
     }, function(error) {
         alert("Error al enviar: " + JSON.stringify(error));
     });
