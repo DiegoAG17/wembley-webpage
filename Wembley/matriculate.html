@@ -25,6 +25,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
+
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+   		(function(){
+      		emailjs.init({
+        	publicKey: "TZj-a2m9f2L-VBAcX",
+      		});
+   		})();
+	</script>
 </head>
 
 <body>
@@ -42,7 +53,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li><a href="index.html">Inicio</a></li>
 					<li><a href="about.html">Quienes Somos</a></li>
 					<li><a href="courses.html">Cursos</a></li>
-					<li class="active"><a href="exams.html">Exámenes</a></li>
+					<li><a href="exams.html">Exámenes</a></li>
 					<li><a href="contact.html">Contacto</a></li>
 
 				</ul>
@@ -54,62 +65,222 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
  	<header id="head" class="secondary">
             <div class="container">
-                    <h1>Exámenes</h1>
+                    <h1>Matricúlate</h1>
                 </div>
     </header>
 
-
     <!-- container -->
-    <section class="container">
-        <h3>Exámenes que Preparamos</h3>
-        <p>Como centro examinador y preparador oficial, te acompañamos en la obtención de algunos de los títulos de idiomas más reconocidos internacionalmente. Estos son los organismos con los que trabajamos:</p>
-        <div class="exam-grid top-space">
-            <div class="exam-card">
-                <img src="assets/images/cambridge.png" alt="University of Cambridge">
-                <h4>Cambridge English</h4>
-                <p>Reconocido por miles de universidades, empresas y gobiernos de todo el mundo, es uno de los títulos de inglés más prestigiosos y solicitados a nivel internacional.</p>
-                <a href="https://www.cambridgeenglish.org/" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-            <div class="exam-card">
-                <img src="assets/images/aptis.png" alt="Aptis - British Council">
-                <h4>Aptis</h4>
-                <p>Desarrollado por el British Council, es un examen moderno y flexible que certifica tu nivel de inglés de forma rápida y fiable, cada vez más solicitado por empresas.</p>
-                <a href="https://www.britishcouncil.org/exam/aptis" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-            <div class="exam-card">
-                <img src="assets/images/trinity.png" alt="Trinity College London">
-                <h4>Trinity College London</h4>
-                <p>Una de las instituciones examinadoras de inglés más respetadas del Reino Unido, centrada en la comunicación real y aceptada en universidades de todo el mundo.</p>
-                <a href="https://www.trinitycollege.com/" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-            <div class="exam-card">
-                <img src="assets/images/ielts.png" alt="IELTS">
-                <h4>IELTS</h4>
-                <p>Uno de los exámenes de inglés más reconocidos del mundo, aceptado por universidades, empresas y gobiernos para estudiar, trabajar o emigrar a países de habla inglesa.</p>
-                <a href="https://www.ielts.org/" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-            <div class="exam-card">
-                <img src="assets/images/toefle.png" alt="TOEFL - ETS">
-                <h4>TOEFL</h4>
-                <p>Desarrollado por ETS, es el examen de referencia para acceder a universidades de Estados Unidos y de todo el mundo, reconocido por más de 13.000 instituciones en más de 160 países.</p>
-                <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-            <div class="exam-card">
-                <img src="assets/images/delf.png" alt="DELF DALF">
-                <h4>DELF / DALF</h4>
-                <p>Diplomas oficiales de francés expedidos por el Ministerio de Educación de Francia, con validez permanente y reconocimiento en todo el mundo.</p>
-                <a href="https://www.delf-dalf.es/" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-            <div class="exam-card">
-                <img src="assets/images/dele.png" alt="DELE - Instituto Cervantes">
-                <h4>DELE</h4>
-                <p>El título oficial de español más reconocido internacionalmente, otorgado por el Instituto Cervantes en nombre del Ministerio de Educación de España.</p>
-                <a href="https://examenes.cervantes.es/es/dele/que-es" target="_blank" rel="noopener">Más información <i class="fa fa-external-link"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- /container -->
-    <footer id="footer">
+    <div class="container">
+		<p class="enrollment-intro">Rellena el siguiente formulario para solicitar tu plaza. Nos pondremos en contacto contigo para confirmar la matrícula.</p>
+
+		<form class="form-light mt-20" role="form" id="enrollForm">
+			<h3 class="section-title">Datos del alumno</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nombre y apellidos*</label>
+						<input type="text" class="form-control" id="studentName" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>DNI*</label>
+						<input type="text" class="form-control" id="studentDni" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Lugar de nacimiento</label>
+						<input type="text" class="form-control" id="studentBirthplace">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Fecha de nacimiento*</label>
+						<input type="date" class="form-control" id="studentBirthdate" required>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Dirección</label>
+						<input type="text" class="form-control" id="studentAddress">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Código postal</label>
+						<input type="text" class="form-control" id="studentPostal">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Localidad</label>
+						<input type="text" class="form-control" id="studentTown">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Provincia</label>
+						<input type="text" class="form-control" id="studentProvince">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Email*</label>
+						<input type="email" class="form-control" id="studentEmail" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Teléfono*</label>
+						<input type="tel" class="form-control" id="studentPhone" required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Nivel*</label>
+				<select class="form-control" id="course" required>
+					<option value="">Selecciona un nivel...</option>
+					<option value="B1">B1</option>
+					<option value="B2">B2</option>
+					<option value="C1">C1</option>
+					<option value="C2">C2</option>
+				</select>
+			</div>
+
+			<h3 class="section-title top-space">Datos del representante legal <small>(en caso de menores)</small></h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nombre completo</label>
+						<input type="text" class="form-control" id="guardianName">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>DNI</label>
+						<input type="text" class="form-control" id="guardianDni">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Dirección completa</label>
+						<input type="text" class="form-control" id="guardianAddress">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Código postal</label>
+						<input type="text" class="form-control" id="guardianPostal">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" class="form-control" id="guardianEmail">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Teléfono</label>
+						<input type="tel" class="form-control" id="guardianPhone">
+					</div>
+				</div>
+			</div>
+
+			<h3 class="section-title top-space">Persona de contacto <small>(en caso de emergencia)</small></h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nombre completo</label>
+						<input type="text" class="form-control" id="emergencyName">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Teléfono</label>
+						<input type="tel" class="form-control" id="emergencyPhone">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Observaciones</label>
+				<textarea class="form-control" id="observations" style="height:100px;"></textarea>
+			</div>
+
+			<div class="enrollment-consent">
+				<label class="checkbox-line"><input type="checkbox" id="consentData" required> Doy mi consentimiento para el tratamiento de mis datos con las finalidades descritas en el <a href="#">Aviso Legal</a>.</label>
+				<label class="checkbox-line"><input type="checkbox" id="acceptTerms" required> He leído y acepto las <a href="#">condiciones de matriculación</a>.</label>
+			</div>
+
+			<button type="submit" class="btn btn-two">Enviar Matrícula</button><p><br/></p>
+		</form>
+		<script>
+			document.getElementById("enrollForm").addEventListener("submit", function (e) {
+				e.preventDefault();
+				var val = function (id) { return document.getElementById(id).value; };
+				var course = val('course');
+				var message =
+					"NUEVA SOLICITUD DE MATRÍCULA\n\n" +
+					"--- Datos del alumno ---\n" +
+					"Nombre: " + val('studentName') + "\n" +
+					"DNI: " + val('studentDni') + "\n" +
+					"Lugar de nacimiento: " + val('studentBirthplace') + "\n" +
+					"Fecha de nacimiento: " + val('studentBirthdate') + "\n" +
+					"Dirección: " + val('studentAddress') + "\n" +
+					"Código postal: " + val('studentPostal') + "\n" +
+					"Localidad: " + val('studentTown') + "\n" +
+					"Provincia: " + val('studentProvince') + "\n" +
+					"Nivel: " + course + "\n\n" +
+					"--- Representante legal (si menor) ---\n" +
+					"Nombre: " + val('guardianName') + "\n" +
+					"DNI: " + val('guardianDni') + "\n" +
+					"Dirección: " + val('guardianAddress') + "\n" +
+					"Código postal: " + val('guardianPostal') + "\n" +
+					"Email: " + val('guardianEmail') + "\n" +
+					"Teléfono: " + val('guardianPhone') + "\n\n" +
+					"--- Contacto de emergencia ---\n" +
+					"Nombre: " + val('emergencyName') + "\n" +
+					"Teléfono: " + val('emergencyPhone') + "\n\n" +
+					"--- Observaciones ---\n" +
+					val('observations');
+
+				var parms = {
+					name: val('studentName'),
+					email: val('studentEmail'),
+					phone: val('studentPhone'),
+					subject: "Solicitud de matrícula - " + course,
+					message: message
+				};
+
+				var notifyWembley = emailjs.send("service_6fmf46u", "template_ue7gx7g", parms);
+				var confirmToClient = emailjs.send("service_6fmf46u", "template_27t3wd6", parms);
+
+				Promise.all([notifyWembley, confirmToClient])
+					.then(function () {
+						window.location.href = "gracias-matricula.html";
+					}, function (error) {
+						alert("Error al enviar: " + JSON.stringify(error));
+					});
+			});
+		</script>
+	</div>
+	<!-- /container -->
+
+	<footer id="footer">
 
 		<div class="container">
    <div class="row">
