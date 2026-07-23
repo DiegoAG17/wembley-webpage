@@ -8,6 +8,39 @@ Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/license
 */
 jQuery(document).ready(function ($) {
 
+    // Animated count-up for the homepage stats bar
+    var statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    if (statNumbers.length && 'IntersectionObserver' in window) {
+        var animateCount = function (el) {
+            var target = parseInt(el.getAttribute('data-target'), 10);
+            var prefix = el.getAttribute('data-prefix') || '';
+            var suffix = el.getAttribute('data-suffix') || '';
+            var duration = 1500;
+            var startTime = null;
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = Math.min((timestamp - startTime) / duration, 1);
+                var current = Math.floor(progress * target);
+                el.textContent = prefix + current + suffix;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    el.textContent = prefix + target + suffix;
+                }
+            }
+            window.requestAnimationFrame(step);
+        };
+        var statObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        statNumbers.forEach(function (el) { statObserver.observe(el); });
+    }
+
     // Transparent-over-hero navbar on the homepage, solid once scrolled
     var $navbarEl = $('.navbar.navbar-inverse');
     if ($('#head:not(.secondary)').length) {
