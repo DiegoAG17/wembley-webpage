@@ -24,6 +24,11 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 90px;
 }
+.btn {
+	background: var(--color-primary);
+	border-radius: var(--radius-sm);
+	color: #fff;
+}
 body {
 	font-family: 'Inter', sans-serif;
 	font-weight: normal;
@@ -1229,6 +1234,36 @@ nav#filter a.current {
 	background: var(--color-accent-dark);
 	color: #fff;
 }
+.btn-online-info {
+	display: block;
+	margin-bottom: 12px;
+	background: transparent;
+	border: 2px solid var(--color-primary);
+	color: var(--color-primary);
+}
+.btn-online-info:hover {
+	background: var(--color-primary);
+	color: #fff;
+}
+.legal-page {
+	max-width: 850px;
+	margin: 40px auto 60px;
+	line-height: 1.7;
+}
+.legal-page h3 {
+	margin-top: 40px;
+}
+.legal-page h4 {
+	margin-top: 20px;
+}
+.legal-placeholder-notice {
+	background: #FFF8E6;
+	border: 1px solid #F0D999;
+	border-radius: var(--radius-sm);
+	padding: 16px 20px;
+	color: #7A5C00;
+	margin-bottom: 30px;
+}
 .thankyou-page {
 	max-width: 600px;
 	margin: 70px auto;
@@ -1491,11 +1526,6 @@ nav#filter a.current {
 }
 .flat .plan.featured:hover li.plan-name, .flat .plan:hover li.plan-name, .flat .plan.featured.plan-name {
 	background: var(--color-accent-dark) !important;
-}
-.btn {
-	background: var(--color-primary);
-	border-radius: var(--radius-sm);
-	color: #fff;
 }
 .footer2 a {
 	padding: 4px 8px;
