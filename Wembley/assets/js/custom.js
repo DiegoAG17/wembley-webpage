@@ -1,11 +1,3 @@
-/*
-Theme: eLearning - Free Educational Responsive Web Template
-Description: Free to use for personal and commercial use
-Author: WebThemez.com
-Website: http://webthemez.com
-Note: Please do not remove the footer backlink (webthemez.com)--(if you want to remove contact: webthemez@gmail.com)
-Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
-*/
 jQuery(document).ready(function ($) {
 
     // Animated count-up for the homepage stats bar
@@ -101,6 +93,19 @@ jQuery(document).ready(function ($) {
                     columnWidth: $container.width() / $resize
                 }
             });
+        });
+    }
+
+    // WhatsApp speech bubble: on mobile, auto-hide after a few seconds or on the first scroll/swipe
+    var $waBubble = $('.whatsapp-bubble');
+    if ($waBubble.length && window.matchMedia('(max-width: 767px)').matches) {
+        var hideWaBubble = function () {
+            $waBubble.addClass('whatsapp-bubble-hide');
+        };
+        var waAutoHideTimer = setTimeout(hideWaBubble, 5000);
+        $(window).one('scroll touchmove', function () {
+            clearTimeout(waAutoHideTimer);
+            hideWaBubble();
         });
     }
 });
