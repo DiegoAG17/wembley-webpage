@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /gracias-contacto.html
+Disallow: /gracias-matricula.html
+Disallow: /condiciones-online.html
+
+Sitemap: https://wembleyschool.es/sitemap.xml
